@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ParaPara anime</h1>
+    You can change the images of the 'image' folder as you like. The titles
+    should be 'image + number' like 'image3'.
+    <div id="root"></div>
+    <script>
+      let countUp = 1;
+
+      const img = document.createElement('img');
+      function setImg() {
+        countUp += 1;
+        document.getElementById('root').appendChild(img);
+        img.setAttribute('src', `./images/image${countUp}.svg`);
+        if (countUp === 12) {
+          countUp = 0;
+        }
+      }
+      const myInter = setInterval(setImg, 200); //learger number:make slower movement
+    </script>
+  </body>
+</html>

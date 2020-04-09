@@ -23,16 +23,7 @@
     <div class="container">
       <h1>ParaPara anime</h1>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-        eligendi, nihil quo repellendus eaque obcaecati quibusdam consequatur
-        optio dignissimos hic porro, facere ratione nisi et explicabo minus
-        magni illo qui.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-        eligendi, nihil quo repellendus eaque obcaecati quibusdam consequatur
-        optio dignissimos hic porro, facere ratione nisi et explicabo minus
-        magni illo qui.
+        Mochi jumps to your scroll.
       </p>
 
       <div id="root"></div>
@@ -44,7 +35,6 @@
 
       const img = document.createElement('img');
       img.setAttribute('alt', `motchi`);
-      function setImg() {}
       let timeoutId;
       window.addEventListener('scroll', function () {
         countUp = Math.floor(y / 100);
@@ -52,7 +42,6 @@
         clearTimeout(timeoutId);
 
         timeoutId = setTimeout(function () {
-          let reset = 1;
           if (y > 0 && y < 1100) {
             null;
           } else if (y >= 1100 && y < 2200) {
@@ -65,7 +54,6 @@
             y -= 4400;
           }
 
-          console.log(countUp);
           document.getElementById('root').appendChild(img);
           img.setAttribute('src', `./images/image${countUp}.svg`);
         }, 1);
